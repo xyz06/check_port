@@ -123,11 +123,7 @@ def find_processName(pid):
 
 
 def write_file(out, data):
-    if not os.path.exists(out):
-        f = open(out, "w")
-    else:
-        f = open(out, "a+")
-
+    f = open(out, "a+")
     for d in data:
         f.write(json.dumps(d) + "\n")
     f.close()
