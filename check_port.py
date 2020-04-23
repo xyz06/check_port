@@ -34,7 +34,7 @@ def get_info(info):
         msg = info[:start.start()]
     oneList = msg.strip(" ").strip("\n").split(" ")
     for i in oneList:
-        if not i and i != "0":
+        if i and i != "0":
             oneInfo.append(i)
     if not start:
         return
@@ -52,6 +52,7 @@ def cmd(systemType):
     # elif systemType == "Mac":
     #     info = os.popen().read()
     info_filter(info)
+
 
 
 def spider_geoip(ip):
